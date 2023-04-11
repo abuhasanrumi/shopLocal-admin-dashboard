@@ -48,8 +48,7 @@ export const AddBlog = () => {
 
                     <CustomInput type="text" label="Enter Blog Title" />
                     <select className="form-control mb-3 py-3" id="new-blog-select" aria-label="Select Blog Category">
-                        <option value="">Open this select menu</option>
-                        <option value="">Open this select menu</option>
+                        <option value="">Select Blog Category</option>
                     </select>
                     <ReactQuill
                         theme="snow"
