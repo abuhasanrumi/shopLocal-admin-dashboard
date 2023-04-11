@@ -2,6 +2,10 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 .trigger {
   padding: 0 24px;
   font-size: 18px;
@@ -18,3 +22,43 @@ body {
   margin: 16px;
   background: rgba(255, 255, 255, 0.3);
 }
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+/* Login page css starts */
+
+.login-page-wrapper {
+  background: #222f3e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-section {
+  min-width: 300px;
+  width: 30%;
+}
+
+.login-section input {
+  border-radius: 0;
+}
+
+.forgotPass {
+  color: #222f3e;
+  text-decoration: none;
+  display: block;
+  margin-top: 20px;
+}
+
+.login-section .loginBtn {
+  background-color: #ffd334;
+  height: 50px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 0;
+}
+
+/* Login page css ends */

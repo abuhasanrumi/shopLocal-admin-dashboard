@@ -1,8 +1,19 @@
 import React from 'react'
+import CustomInput from '../components/CustomInput'
+import { Link } from 'react-router-dom'
 
 const ForgotPassword = () => {
     return (
-        <div>ForgotPassword</div>
+        <div className='login-page-wrapper'>
+            <div className="login-section bg-white p-4 p-lg-5">
+                <h3>ShopLocal</h3>
+                <p className='text-muted'>Enter your email to reset password</p>
+                <form className='mt-4 text-muted' action="">
+                    <CustomInput type="email" id="email" label="Email Address" />
+                    <button type="submit" class="loginBtn btn">Reset Password</button>
+                </form>
+            </div>
+        </div>
     )
 }
 
