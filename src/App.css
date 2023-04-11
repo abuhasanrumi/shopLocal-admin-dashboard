@@ -8,6 +8,10 @@
   --color-c3d4da: #ced4da;
 }
 
+a {
+  text-decoration: none;
+}
+
 .green {
   color: var(--color-47ad24);
   font-size: 14px;
@@ -35,4 +39,17 @@
   font: 14px;
   font-family: Roboto !important;
   color: var(--color-828599);
+}
+
+.ant-dropdown {
+  top: 75px !important;
+  border-radius: 0;
+}
+
+.ant-dropdown-menu {
+  border-radius: 0 !important;
+}
+
+.ant-dropdown-menu-item {
+  border-radius: 0 !important;
 }

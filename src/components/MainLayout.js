@@ -2,18 +2,34 @@ import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, theme } from 'antd';
+
+import { Layout, Menu, theme, Dropdown } from 'antd';
 import React, { useState } from 'react';
 import { RiDashboardFill, RiArchiveDrawerFill, RiFileAddFill, RiCustomerService2Fill } from "react-icons/ri"
 import { SiBrandfolder } from "react-icons/si"
 import { MdOutlineFormatColorFill, MdCategory, MdNotifications } from "react-icons/md"
 import { FaList, FaPen, FaMicroblog } from "react-icons/fa"
 import { BsPeopleFill, BsFillCartCheckFill } from "react-icons/bs"
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 const { Header, Sider, Content } = Layout;
 
 
+
+
 const MainLayout = () => {
+    const items = [
+        {
+            label: <Link to="#">Profile</Link>,
+            key: 'setting',
+        },
+        {
+            type: 'divider',
+        },
+        {
+            label: <Link>Sign Out</Link>,
+            key: 'sign-out',
+        }
+    ];
     const [collapsed, setCollapsed] = useState(false);
     const {
         token: { colorBgContainer },
@@ -154,13 +170,22 @@ const MainLayout = () => {
                             <MdNotifications className='fs-4' />
                             <span className='badge bg-warning position-absolute'>3</span>
                         </div>
-                        <div className='d-flex gap-3 align-items-center'>
-                            <img height={40} width={40} className='img-fluid rounded-3' src="https://stroyka-admin.html.themeforest.scompiler.ru/variants/ltr/images/customers/customer-4-64x64.jpg" alt="" />
-                            <div className=''>
-                                <p className='fw-bold'>Hola, Rumi!</p>
-                                <p className='text-muted'>admin@gmail.com</p>
+
+                        <Dropdown
+                            menu={{
+                                items,
+                            }}
+                            trigger={['click']}
+                        >
+                            <div className='d-flex gap-3 align-items-center'>
+                                <img height={40} width={40} className='img-fluid rounded-3' src="https://stroyka-admin.html.themeforest.scompiler.ru/variants/ltr/images/customers/customer-4-64x64.jpg" alt="" />
+                                <div className=''>
+                                    <p className='fw-bold'>Hola, Rumi!</p>
+                                    <p className='text-muted'>admin@gmail.com</p>
+                                </div>
                             </div>
-                        </div>
+                        </Dropdown>
+
                     </div>
                 </Header>
                 <Content
