@@ -105,7 +105,8 @@ main::-webkit-scrollbar {
   margin-top: 20px;
 }
 
-.login-section .loginBtn {
+.login-section .loginBtn,
+.submitBtn {
   background-color: #ffd334;
   height: 50px;
   width: 100%;

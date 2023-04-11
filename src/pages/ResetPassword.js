@@ -10,7 +10,7 @@ const ResetPassword = () => {
                 <form className='mt-4 text-muted' action="">
                     <CustomInput type="password" id="newPass" label="New Password" />
                     <CustomInput type="password" id="confirmPass" label="Confirm Password" />
-                    <button type="submit" class="loginBtn btn">Confirm Change</button>
+                    <button type="submit" className="loginBtn btn">Confirm Change</button>
                 </form>
             </div>
         </div>

@@ -11,7 +11,7 @@ const Login = () => {
                 <form className='mt-4 text-muted' action="">
                     <CustomInput type="email" id="email" label="Email Address" />
                     <CustomInput type="pass" id="pass" label="Password" />
-                    <Link to="/admin"><button type="submit" class="loginBtn btn">Login</button></Link>
+                    <Link to="/admin"><button type="submit" className="loginBtn btn">Login</button></Link>
                     <Link to="/forgot-password" className='forgotPass'><p>Forgot Password?</p></Link>
                 </form>
             </div>

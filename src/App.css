@@ -21,11 +21,10 @@
 .quill {
   background-color: white;
 }
-
-.form-control {
-  box-shadow: none;
-  border-color: var(--color-c3d4da);
+.ql-editor {
+  min-height: 200px;
 }
+
 .title {
   font: 28px;
   font-family: Roboto !important;

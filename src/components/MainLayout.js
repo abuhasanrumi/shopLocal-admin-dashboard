@@ -76,7 +76,7 @@ const MainLayout = () => {
                                     label: 'Brand List'
                                 },
                                 {
-                                    key: 'addCategory',
+                                    key: 'addProdCategory',
                                     icon: <MdCategory className='fs-5' />,
                                     label: 'Add Category'
                                 },

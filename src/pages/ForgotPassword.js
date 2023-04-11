@@ -10,7 +10,7 @@ const ForgotPassword = () => {
                 <p className='text-muted'>Enter your email to reset password</p>
                 <form className='mt-4 text-muted' action="">
                     <CustomInput type="email" id="email" label="Email Address" />
-                    <button type="submit" class="loginBtn btn">Reset Password</button>
+                    <button type="submit" className="loginBtn btn">Reset Password</button>
                 </form>
             </div>
         </div>
