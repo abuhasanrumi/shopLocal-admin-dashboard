@@ -31,11 +31,6 @@
   color: var(--color-212529);
 }
 
-.sub-title {
-  font: 24px;
-  font-family: Roboto !important;
-  color: var(--color-212529);
-}
 .desc {
   font: 14px;
   font-family: Roboto !important;
