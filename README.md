@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# ShopLocal Admin Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Admin Dashboard provides users a convenient and user-friendly way to manage various aspects of their online store. This tool includes features such as a login page, forgot password page, reset password page, dashboard page showing store overview.
 
-## Available Scripts
+Features:
 
-In the project directory, you can run:
+- User authentication with login page and forgot/reset password functionality 
+- Dashboard overview displaying important metrics and statistics (@ant-design/charts used for chart display)
+- Customers list showing a list of all registered customers with basic information such as name and email 
+- Add Product and Product list page displaying all the products in the store, with filters and search functionality (axios used for data fetching)
+- Add Brand and Brand list displaying all the brands associated with the products in the store, with the ability to add or remove brands
+- Add Product Category and Category list displaying all the categories associated with the products in the store, with the ability to add or remove categories
+- Add Product Color and Color list displaying all the available colors associated with the products in the store, with the ability to add or remove colors
+- Add new Blog and Blog list page displaying all the blog posts in the store, with the ability to add or remove blog posts 
 
-### `npm start`
+In addition to these features, the following packages from the dependencies list are used:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- antd: A UI component library for React
+- formik: A package used for form management
+- react-icons: A package used for including icons in the UI
+- react-quill: A package used for including a rich text editor
+- react-router-dom: A package used for handling routing within the application
+- yup: A package used for data validation in forms.
+- and more! 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
