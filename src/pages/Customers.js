@@ -5,35 +5,44 @@ import { getUsers } from '../features/customers/customerSlice';
 
 const columns = [
     {
-        title: "SNo",
+        title: "No",
         dataIndex: "key",
     },
     {
         title: "Name",
         dataIndex: "name",
+        defaultSortOrder: "descend",
+        sorter: (a, b) => a.name.length - b.name.length
     },
     {
-        title: "email",
+        title: "Email",
         dataIndex: "email",
     },
     {
-        title: "address",
+        title: "Address",
         dataIndex: "address",
     },
 ];
 
 const Customers = () => {
     const dispatch = useDispatch()
-    useEffect(() => {
-        dispatch(getUsers())
-    }, [])
-
     const customerState = useSelector((state) => state.customer.customers)
+
+    useEffect(() => {
+        const controller = new AbortController()
+        dispatch(getUsers({ signal: controller.signal }))
+
+        return () => {
+            controller.abort();
+        }
+    }, [dispatch])
+
+
     const data1 = [];
     for (let i = 0; i < customerState.length; i++) {
         if (customerState[i].role !== "admin") {
             data1.push({
-                key: i + 1,
+                key: i,
                 name: customerState[i].firstName + " " + customerState[i].lastName,
                 email: customerState[i].email,
                 address: customerState[i].address,
