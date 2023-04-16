@@ -14,6 +14,8 @@ const columns = [
     {
         title: 'Brand Name',
         dataIndex: 'title',
+        defaultSortOrder: "descend",
+        sorter: (a, b) => a.title.length - b.title.length
     },
     {
         title: 'Action',
