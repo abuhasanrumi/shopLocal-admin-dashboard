@@ -129,3 +129,8 @@ main::-webkit-scrollbar {
   justify-content: center;
 }
 /* Dashboard page ends */
+
+.error {
+  color: red;
+  font-size: 12px;
+}
