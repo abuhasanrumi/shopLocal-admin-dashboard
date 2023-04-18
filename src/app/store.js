@@ -7,6 +7,7 @@ import prodCatReducer from '../features/prodCat/prodCatSlice'
 import colorReducer from '../features/color/colorSlice'
 import blogListReducer from '../features/blogList/blogListSlice'
 import blogCatListReducer from '../features/blogCatList/blogCatListSlice'
+import enquiryReducer from '../features/enquiry/enquirySlice'
 
 
 
@@ -19,7 +20,8 @@ export const store = configureStore({
         prodCat: prodCatReducer,
         color: colorReducer,
         blogList: blogListReducer,
-        blogCatList: blogCatListReducer
+        blogCatList: blogCatListReducer,
+        enquiry: enquiryReducer
     }
 })
 
