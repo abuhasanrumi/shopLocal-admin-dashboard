@@ -54,7 +54,13 @@ const Enquiries = () => {
             email: enquiryState[i].email,
             phone: enquiryState[i].mobile,
             comment: enquiryState[i].comment,
-            status: enquiryState[i].status,
+            status: (
+                <>
+                    <select name="" className='form-control form-select' id="">
+                        <option value="">Set Status</option>
+                    </select>
+                </>
+            ),
             action: (
                 <>
                     <Link to='/' className='px-2 fs-4 text-danger'>

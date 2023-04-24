@@ -1,5 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Table } from "antd";
+import { useDispatch, useSelector } from 'react-redux';
+import { getOrder } from '../features/auth/authSlice';
+import { Link } from 'react-router-dom';
+import { BiEdit } from 'react-icons/bi';
+import { AiFillDelete } from 'react-icons/ai';
 
 const columns = [
     {
@@ -19,18 +24,34 @@ const columns = [
         dataIndex: "staus",
     },
 ];
-const data1 = [];
-for (let i = 0; i < 46; i++) {
-    data1.push({
-        key: i,
-        name: `Edward King ${i}`,
-        product: 32,
-        staus: `London, Park Lane no. ${i}`,
-    });
-}
-
 
 const Orders = () => {
+
+    const dispatch = useDispatch();
+    const orderState = useSelector((state) => state.auth.order);
+
+    useEffect(() => {
+        dispatch(getOrder());
+    }, []);
+
+    const data1 = [];
+    for (let i = 0; i < orderState.length; i++) {
+        data1.push({
+            key: i + 1,
+            title: orderState[i].title,
+            action: (
+                <>
+                    <Link to='/' className='px-2 fs-4 text-danger'>
+                        <BiEdit />
+                    </Link>
+                    <Link to='/' className='px-2 fs-4 text-danger'>
+                        <AiFillDelete />
+                    </Link>
+                </>
+            ),
+        });
+    }
+
     return (
         <div>
             <h3 className="mb-4 title">Orders</h3>
