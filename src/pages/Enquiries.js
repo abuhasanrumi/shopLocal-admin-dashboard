@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Table } from "antd";
+import { useDispatch, useSelector } from 'react-redux';
+import { BiEdit } from 'react-icons/bi';
+import { AiFillDelete } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import { getEnquiry } from '../features/enquiry/enquirySlice';
 
 const columns = [
     {
-        title: "SNo",
+        title: "No",
         dataIndex: "key",
     },
     {
@@ -11,35 +16,49 @@ const columns = [
         dataIndex: "name",
     },
     {
-        title: "Product",
-        dataIndex: "product",
+        title: "Email",
+        dataIndex: "email",
+    },
+    {
+        title: "Phone",
+        dataIndex: "phone",
+    },
+    {
+        title: "Comment",
+        dataIndex: "comment",
     },
     {
         title: "Status",
         dataIndex: "staus",
     },
+    {
+        title: "Action",
+        dataIndex: "action",
+    }
 ];
 const Enquiries = () => {
 
     const dispatch = useDispatch();
-    const blogState = useSelector((state) => state.blogCatList.blogCats);
+    const enquiryState = useSelector((state) => state.enquiry.enquiries);
+    console.log(enquiryState)
 
     useEffect(() => {
-        dispatch(getBlogCatList());
+        dispatch(getEnquiry());
     }, []);
 
     const data1 = [];
-    for (let i = 0; i < blogState.length; i++) {
+    for (let i = 0; i < enquiryState.length; i++) {
         data1.push({
             key: i + 1,
-            title: blogState[i].title,
+            name: enquiryState[i].name,
+            email: enquiryState[i].email,
+            phone: enquiryState[i].mobile,
+            comment: enquiryState[i].comment,
+            status: enquiryState[i].status,
             action: (
                 <>
                     <Link to='/' className='px-2 fs-4 text-danger'>
                         <BiEdit />
-                    </Link>
-                    <Link to='/' className='px-2 fs-4 text-danger'>
-                        <AiFillDelete />
                     </Link>
                 </>
             ),

@@ -27,7 +27,7 @@ const columns = [
 const Customers = () => {
     const dispatch = useDispatch()
     const customerState = useSelector((state) => state.customer.customers)
-
+    console.log(customerState)
     useEffect(() => {
         const controller = new AbortController()
         dispatch(getUsers({ signal: controller.signal }))
