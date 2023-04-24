@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Table } from "antd";
 import { useDispatch, useSelector } from 'react-redux';
-import { getOrder } from '../features/auth/authSlice';
+import { getAllOrder } from '../features/auth/authSlice';
 import { Link } from 'react-router-dom';
 import { BiEdit } from 'react-icons/bi';
 import { AiFillDelete } from 'react-icons/ai';
@@ -31,7 +31,7 @@ const Orders = () => {
     const orderState = useSelector((state) => state.auth.order);
 
     useEffect(() => {
-        dispatch(getOrder());
+        dispatch(getAllOrder());
     }, []);
 
     let data1 = [];

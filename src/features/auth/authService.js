@@ -17,14 +17,14 @@ const login = async (userData) => {
     return response.data
 }
 
-const getOrder = async () => {
-    const response = await axios.get(`${base_url}user/get-orders/`, config);
+const getAllOrder = async () => {
+    const response = await axios.get(`${base_url}user/get-all-orders/`, config);
     return response.data;
 };
 
 const authService = {
     login,
-    getOrder
+    getAllOrder
 }
 
 export default authService
