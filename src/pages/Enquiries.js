@@ -29,7 +29,7 @@ const columns = [
     },
     {
         title: "Status",
-        dataIndex: "staus",
+        dataIndex: "status",
     },
     {
         title: "Action",
