@@ -34,22 +34,24 @@ const Orders = () => {
         dispatch(getOrder());
     }, []);
 
-    const data1 = [];
-    for (let i = 0; i < orderState.length; i++) {
-        data1.push({
-            key: i + 1,
-            title: orderState[i].title,
-            action: (
-                <>
-                    <Link to='/' className='px-2 fs-4 text-danger'>
-                        <BiEdit />
-                    </Link>
-                    <Link to='/' className='px-2 fs-4 text-danger'>
-                        <AiFillDelete />
-                    </Link>
-                </>
-            ),
-        });
+    let data1 = [];
+    if (orderState) {
+        for (let i = 0; i < orderState.length; i++) {
+            data1.push({
+                key: i + 1,
+                title: orderState[i].title,
+                action: (
+                    <>
+                        <Link to='/' className='px-2 fs-4 text-danger'>
+                            <BiEdit />
+                        </Link>
+                        <Link to='/' className='px-2 fs-4 text-danger'>
+                            <AiFillDelete />
+                        </Link>
+                    </>
+                ),
+            });
+        }
     }
 
     return (
@@ -59,5 +61,6 @@ const Orders = () => {
         </div>
     )
 }
+
 
 export default Orders
