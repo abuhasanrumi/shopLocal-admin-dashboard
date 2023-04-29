@@ -43,7 +43,7 @@ const Login = () => {
         <div className='login-page-wrapper'>
             <div className="login-section bg-white p-4 p-lg-5">
                 <h3>ShopLocal</h3>
-                <p className='text-muted'>Log in to your account to continue.</p>
+                <p className='text-muted'>Log in to your account to continue</p>
                 <div className="error text-center">
                     {message.message == "Rejected" ? "You are not an Admin" : ""}
                 </div>
