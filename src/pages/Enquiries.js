@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { Table } from "antd";
 import { useDispatch, useSelector } from 'react-redux';
 import { BiEdit } from 'react-icons/bi';
-import { AiFillDelete } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { getEnquiry } from '../features/enquiry/enquirySlice';
 
